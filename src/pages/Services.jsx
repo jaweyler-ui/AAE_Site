@@ -7,7 +7,7 @@ const SERVICES = [
     emoji: '🔬',
     title: 'Comprehensive Hearing Evaluations',
     subtitle: 'Your hearing journey starts here',
-    desc: 'Our diagnostic evaluations go far beyond a simple "pass/fail" test. Dr. Leila conducts a full audiological assessment including pure-tone audiometry, speech discrimination testing, tympanometry, and otoacoustic emission (OAE) testing. You'll leave with a complete picture of your hearing health, a detailed report, and a clear, personalized recommendation.',
+    desc: 'Our diagnostic evaluations go far beyond a simple "pass/fail" test. Dr. Leila conducts a full audiological assessment including pure-tone audiometry, speech discrimination testing, tympanometry, and otoacoustic emission (OAE) testing. You\'ll leave with a complete picture of your hearing health, a detailed report, and a clear, personalized recommendation.',
     features: ['Pure-tone audiometry', 'Speech recognition testing', 'Middle ear evaluation (tympanometry)', 'Otoacoustic emissions (OAE)', 'Pediatric behavioral testing', 'Detailed written report'],
     cta: '/contact',
     ctaText: 'Schedule Your Evaluation',
