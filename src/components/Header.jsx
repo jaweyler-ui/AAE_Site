@@ -8,6 +8,7 @@ export default function Header() {
   const [solid, setSolid] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [bannerOpen, setBannerOpen] = useState(true)
+  const [bannerClosing, setBannerClosing] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -28,23 +29,31 @@ export default function Header() {
 
   const isActive = (path) => location.pathname === path ? 'active' : ''
 
+  const closeBanner = () => {
+    setBannerClosing(true)
+    setTimeout(() => {
+      setBannerOpen(false)
+      setBannerClosing(false)
+    }, 370)
+  }
+
   return (
     <>
       {/* Urgency Banner */}
       {bannerOpen && (
-        <div className="urgency-banner" role="banner">
+        <div className={`urgency-banner${bannerClosing ? ' closing' : ''}`} role="banner">
           <span>🎯 Now Accepting New Patients — Same-Week Appointments Available!</span>
           <a href={PHONE_HREF}>{PHONE}</a>
           <button
             className="urgency-close"
-            onClick={() => setBannerOpen(false)}
+            onClick={closeBanner}
             aria-label="Close banner"
           >✕</button>
         </div>
       )}
 
       {/* Main Header */}
-      <header className={`header ${solid || location.pathname !== '/' ? 'solid' : 'transparent'}`}>
+      <header className={`header ${solid || location.pathname !== '/' ? 'solid' : 'transparent'}${bannerOpen && !bannerClosing ? ' with-banner' : ''}`}>
         <div className="header-inner">
 
           {/* Logo */}

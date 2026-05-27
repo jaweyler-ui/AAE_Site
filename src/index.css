@@ -38,6 +38,7 @@
   --font-body: 'Nunito Sans', 'Segoe UI', sans-serif;
   --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  --banner-height: 42px;
 }
 
 /* ── Reset & Base ── */
@@ -173,7 +174,10 @@ p { font-size: 1rem; line-height: 1.75; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  transition: background 0.35s ease, box-shadow 0.35s ease;
+  transition: background 0.35s ease, box-shadow 0.35s ease, top 0.35s ease;
+}
+.header.with-banner {
+  top: var(--banner-height);
 }
 .header.transparent { background: transparent; }
 .header.solid {
@@ -370,6 +374,9 @@ p { font-size: 1rem; line-height: 1.75; }
    URGENCY BANNER
    ============================================ */
 .urgency-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1001;
   background: linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 100%);
   color: var(--white);
   padding: 10px 24px;
@@ -377,12 +384,16 @@ p { font-size: 1rem; line-height: 1.75; }
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  position: relative;
-  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  height: var(--banner-height);
+  transform: translateY(0);
+  transition: transform 0.35s ease;
+}
+.urgency-banner.closing {
+  transform: translateY(-100%);
 }
 .urgency-banner a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 2px; }
 .urgency-close {
@@ -414,7 +425,7 @@ p { font-size: 1rem; line-height: 1.75; }
   align-items: center;
   background: linear-gradient(135deg, #081B35 0%, #0B2240 35%, #0A3655 65%, #0C3D5C 100%);
   overflow: hidden;
-  padding: 130px 0 80px;
+  padding: 148px 0 80px;
 }
 .hero-noise {
   position: absolute;
@@ -1035,7 +1046,7 @@ p { font-size: 1rem; line-height: 1.75; }
    PAGE HERO (Inner pages)
    ============================================ */
 .page-hero {
-  padding: 140px 0 80px;
+  padding: 152px 0 80px;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
   position: relative;
   overflow: hidden;
@@ -1739,6 +1750,7 @@ p { font-size: 1rem; line-height: 1.75; }
    RESPONSIVE — MOBILE (max 768px)
    ============================================ */
 @media (max-width: 768px) {
+  :root { --banner-height: 34px; }
   .header-nav { display: none; }
   .header-phone { display: none; }
   .header-actions .btn { display: none; }
@@ -1764,7 +1776,7 @@ p { font-size: 1rem; line-height: 1.75; }
   .final-cta-actions { flex-direction: column; align-items: center; }
   .hero h1 { font-size: 2.4rem; }
   .two-col-reverse { direction: initial; }
-  .urgency-banner { font-size: 0.75rem; padding: 8px 40px 8px 16px; }
+  .urgency-banner { font-size: 0.72rem; padding: 0 40px 0 16px; height: var(--banner-height); }
   .section-padded { padding: 64px 0; }
   .services-home, .testimonials-home, .why-us, .quiz-section, .brands-section, .lead-magnet, .final-cta { padding: 64px 0; }
 }
