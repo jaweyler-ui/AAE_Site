@@ -11,6 +11,7 @@ import HearingAids from './pages/HearingAids'
 import HearingProtection from './pages/HearingProtection'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
+import InsuranceFinancing from './pages/InsuranceFinancing'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/hearing-aids" element={<HearingAids />} />
           <Route path="/hearing-protection" element={<HearingProtection />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/insurance-financing" element={<InsuranceFinancing />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

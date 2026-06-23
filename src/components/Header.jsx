@@ -83,6 +83,7 @@ export default function Header() {
                   <NavLink to="/services">All Services</NavLink>
                   <NavLink to="/hearing-aids">Hearing Aids</NavLink>
                   <NavLink to="/hearing-protection">Hearing Protection</NavLink>
+                  <NavLink to="/insurance-financing">Insurance &amp; Financing</NavLink>
                 </div>
               </li>
               <li><NavLink to="/blog" className={isActive('/blog')}>Resources</NavLink></li>
@@ -120,6 +121,7 @@ export default function Header() {
         <Link to="/services">All Services</Link>
         <Link to="/hearing-aids">Hearing Aids</Link>
         <Link to="/hearing-protection">Hearing Protection</Link>
+        <Link to="/insurance-financing">Insurance &amp; Financing</Link>
         <Link to="/blog">Resources &amp; Blog</Link>
         <Link to="/contact">Contact Us</Link>
         <div className="mobile-nav-phone" style={{ marginTop: 32 }}>

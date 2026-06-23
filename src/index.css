@@ -1233,6 +1233,268 @@ p { font-size: 1rem; line-height: 1.75; }
 .financing-card p { color: var(--text-mid); max-width: 500px; margin: 0 auto 1.5rem; }
 
 /* ============================================
+   INSURANCE & FINANCING PAGE
+   ============================================ */
+
+/* Overview two-col */
+.ins-overview {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 56px;
+  align-items: start;
+}
+.ins-overview-text h2 { margin-bottom: 0.75rem; }
+.ins-overview-text p { color: var(--text-mid); margin-bottom: 1rem; }
+.ins-overview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ins-stat-card {
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+.ins-stat-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+.ins-stat-icon { font-size: 1.5rem; margin-bottom: 4px; }
+.ins-stat-number {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.ins-stat-label { font-size: 0.82rem; font-weight: 600; color: var(--text-light); }
+
+/* Accepted plans grid */
+.ins-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 40px;
+}
+.ins-plan-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: var(--transition);
+}
+.ins-plan-card:hover { box-shadow: var(--shadow-sm); border-color: var(--teal); }
+.ins-plan-check {
+  width: 24px; height: 24px;
+  background: var(--teal-pale);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--teal);
+}
+
+/* Government cards */
+.ins-gov-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.ins-gov-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+.ins-gov-card h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 1rem; }
+.ins-gov-card p { color: var(--text-mid); font-size: 0.94rem; margin-bottom: 0.75rem; line-height: 1.7; }
+.ins-gov-badge {
+  display: inline-block;
+  padding: 5px 16px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+.ins-gov-badge-teal { background: var(--teal); }
+.ins-gov-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+.ins-gov-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.ins-gov-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Financing section */
+.ins-financing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.ins-finance-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.ins-finance-featured {
+  border: 2px solid var(--gold);
+  box-shadow: var(--shadow-md);
+  padding: 40px 36px;
+}
+.ins-finance-card h3 { font-size: 1.3rem; color: var(--navy); margin-bottom: 0.75rem; }
+.ins-finance-card h4 { font-size: 1.05rem; color: var(--navy); margin-bottom: 0.5rem; }
+.ins-finance-card p { color: var(--text-mid); font-size: 0.92rem; line-height: 1.6; }
+.ins-finance-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ins-finance-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+.ins-finance-highlight {
+  text-align: center;
+}
+.ins-finance-highlight strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.ins-finance-highlight span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+/* Process steps */
+.ins-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.ins-process-step {
+  text-align: center;
+  padding: 32px 20px;
+}
+.ins-process-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.ins-process-step h4 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+.ins-process-step p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+
+/* FAQ */
+.ins-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ins-faq-item {
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.ins-faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 4px;
+  cursor: pointer;
+  list-style: none;
+  gap: 16px;
+}
+.ins-faq-item summary::-webkit-details-marker { display: none; }
+.ins-faq-item summary::marker { display: none; content: ''; }
+.ins-faq-q {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+}
+.ins-faq-toggle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--teal);
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--teal-pale);
+  transition: var(--transition);
+}
+.ins-faq-item[open] .ins-faq-toggle { transform: rotate(45deg); }
+.ins-faq-a {
+  padding: 0 4px 20px;
+  color: var(--text-mid);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* Insurance page mobile */
+@media (max-width: 768px) {
+  .ins-overview { grid-template-columns: 1fr; gap: 32px; }
+  .ins-overview-card { flex-direction: row; flex-wrap: wrap; gap: 12px; }
+  .ins-stat-card { flex: 1; min-width: 140px; padding: 20px 16px; }
+  .ins-stat-number { font-size: 1.8rem; }
+  .ins-plans-grid { grid-template-columns: 1fr; }
+  .ins-gov-grid { grid-template-columns: 1fr; }
+  .ins-financing-grid { grid-template-columns: 1fr; }
+  .ins-process-grid { grid-template-columns: 1fr 1fr; }
+  .ins-finance-highlights { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .ins-process-grid { grid-template-columns: 1fr; }
+  .ins-overview-card { flex-direction: column; }
+  .ins-stat-card { min-width: auto; }
+}
+
+/* ============================================
    HEARING PROTECTION PAGE
    ============================================ */
 .protection-audiences {

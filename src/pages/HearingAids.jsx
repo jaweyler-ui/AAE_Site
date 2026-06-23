@@ -266,7 +266,7 @@ export default function HearingAids() {
               We offer CareCredit financing with 0% interest promotional periods, plus assistance with insurance benefits verification. Better hearing is an investment in your quality of life, your relationships, and your cognitive health — and we'll help you find a way to make it work.
             </p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/contact" className="btn btn-gold">Discuss Financing Options</Link>
+              <Link to="/insurance-financing" className="btn btn-gold">View Financing Options</Link>
               <a href="tel:+14098667747" className="btn btn-outline-navy">📞 (409) 866-7747</a>
             </div>
           </div>

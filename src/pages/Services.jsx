@@ -174,7 +174,7 @@ export default function Services() {
             Not sure about your coverage? Call us and we'll verify your benefits — at no charge.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/contact" className="btn btn-gold btn-lg">Book Free Evaluation</Link>
+            <Link to="/insurance-financing" className="btn btn-gold btn-lg">View Insurance &amp; Financing Options</Link>
             <a href="tel:+14098667747" className="btn btn-outline-white">📞 Call to Check Benefits</a>
           </div>
         </div>
