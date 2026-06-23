@@ -1245,6 +1245,7 @@ p { font-size: 1rem; line-height: 1.75; }
 }
 .ins-overview-text h2 { margin-bottom: 0.75rem; }
 .ins-overview-text p { color: var(--text-mid); margin-bottom: 1rem; }
+.ins-overview-text .benefits-list li { color: var(--text-mid); }
 .ins-overview-card {
   display: flex;
   flex-direction: column;
